@@ -2,19 +2,69 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
 function App() {
   return (
     <div className="bg-base-200 text-base-content font-sans">
+      
       {/* Hero Section */}
-      <section className="hero min-h-screen bg-white px-8 py-16 flex flex-col lg:flex-row items-center justify-between">
-        <div className="max-w-xl">
-          <h1 className="text-5xl font-bold text-[#1e40af] mb-4">Nunca más pierdas un cliente por no responder a tiempo</h1>
-          <p className="text-lg mb-6">Creamos chatbots inteligentes que atienden a tus clientes 24/7 mientras tú duermes</p>
-          <button className="btn btn-success text-white text-lg">Obtén tu chatbot gratis</button>
+      <section className="hero min-h-screen bg-white px-8 py-16 flex flex-col items-start">
+        
+        {/* Nombre de la página: Solarion 4.0 */}
+        <h1 className="text-7xl md:text-8xl lg:text-9xl font-extrabold text-[#1e40af] mb-12 whitespace-nowrap font-['Orbitron']">
+          Ascend 4.O
+        </h1>
+        
+        {/* Contenedor principal con el texto a la izquierda y el video a la derecha */}
+        {/* Usamos flex-grow y centramos los elementos para dar balance */}
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between w-full">
+          {/* Contenedor del texto (se adapta para dar más espacio al video) */}
+          <div className="lg:w-1/2 lg:pr-8 mb-8 lg:mb-0">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1e40af] mb-4">
+              Nunca más pierdas un cliente por no responder a tiempo
+            </h2>
+            <p className="text-lg mb-6">Creamos chatbots inteligentes que atienden a tus clientes 24/7 mientras tú duermes</p>
+            <div className="max-w-xl mx-auto">
+          <h2 className="text-3xl font-bold mb-4">¿Listo para dejar de perder clientes?</h2>
+          <p className="text-lg mb-6">
+            Déjanos tu email y uno de nuestros expertos se contactará contigo en menos de 24 horas para darte acceso a tu chatbot gratuito.
+          </p>
+          <form className="form-control w-full">
+            <div className="relative">
+              <input 
+                type="email" 
+                placeholder="Ingresa tu email aquí..." 
+                className="input input-bordered w-full pr-16" 
+              />
+              <button className="btn btn-success absolute top-0 right-0 rounded-l-none text-white">
+                Enviar
+              </button>
+            </div>
+          </form>
         </div>
-        <div className="mockup">
-          <img src="/images/chatbot-mockup.png" alt="Chatbot en acción" className="max-w-md rounded-xl shadow-lg" />
+        
+           
+          </div>
+      
+
+      {/* Formulario de Contacto */}
+      <section className="px-8 py-12 bg-white text-center">
+        
+      </section>
+          
+          {/* Espacio para el video (ahora con más espacio para crecer) */}
+          <div className="w-full lg:w-1/2 flex justify-center">
+            {/* Contenedor para video responsive */}
+            <div className="relative pt-[56.25%] w-full h-0 max-w-2xl">
+             <video 
+                className="absolute inset-0 w-full h-full rounded-xl shadow-lg"
+                src="./public/video.mp4" 
+                title="Video de demostración de chatbot"
+                controls
+                
+               
+              ></video>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -44,70 +94,13 @@ function App() {
       </section>
 
       {/* How It Works */}
-      <section className="px-8 py-12 bg-gray-100">
-        <h2 className="text-3xl font-bold mb-6 text-center">Tu chatbot listo en 3 pasos simples</h2>
-        <div className="timeline timeline-vertical">
-          <div className="timeline-item">
-            <div className="timeline-start">1</div>
-            <div className="timeline-middle">
-              <div className="badge badge-primary">Análisis</div>
-            </div>
-            <div className="timeline-end">Analizamos tu negocio y entendemos tus clientes</div>
-          </div>
-          <div className="timeline-item">
-            <div className="timeline-start">2</div>
-            <div className="timeline-middle">
-              <div className="badge badge-success">Diseño</div>
-            </div>
-            <div className="timeline-end">Creamos conversaciones que venden</div>
-          </div>
-          <div className="timeline-item">
-            <div className="timeline-start">3</div>
-            <div className="timeline-middle">
-              <div className="badge badge-warning">Activación</div>
-            </div>
-            <div className="timeline-end">Tu asistente virtual empieza a trabajar</div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Testimonials */}
-      <section className="px-8 py-12 bg-white">
-        <h2 className="text-3xl font-bold mb-6 text-center">Resultados reales de negocios como el tuyo</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="card bg-base-100 shadow-md p-6">
-            <p>“Desde que usamos el chatbot, nuestras conversiones aumentaron un 50% y el equipo de soporte tiene más tiempo libre.”</p>
-            <div className="mt-4 flex items-center gap-4">
-              <img src="/images/laura.jpg" className="w-12 h-12 rounded-full" />
-              <div>
-                <strong>Laura Gómez</strong><br />
-                Fundadora de EcoModa
-              </div>
-            </div>
-          </div>
-          <div className="card bg-base-100 shadow-md p-6">
-            <p>“Reducimos el tiempo de atención en un 80% y nuestros clientes están más satisfechos que nunca.”</p>
-            <div className="mt-4 flex items-center gap-4">
-              <img src="/images/jose.jpg" className="w-12 h-12 rounded-full" />
-              <div>
-                <strong>José Martínez</strong><br />
-                CEO de TechNova
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Features */}
-      <section className="px-8 py-12 bg-gray-100">
-        <h2 className="text-3xl font-bold mb-6 text-center">Todo lo que necesitas incluido</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          <div>📱 WhatsApp, Facebook, Instagram, sitio web</div>
-          <div>🧠 Respuestas personalizadas por industria</div>
-          <div>📊 Panel de estadísticas</div>
-          <div>🛠️ Soporte técnico y actualizaciones gratis</div>
-        </div>
-      </section>
+  
 
       {/* Guarantee & Urgency */}
       <section className="px-8 py-12 bg-white text-center">
